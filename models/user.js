@@ -10,17 +10,17 @@ var UserSchema = new Schema({
   , updated_at  : { type: Date }
   , email: String
   , passwordDigest: String
-  });
 });
 
 // BEFORE/AFTER FILTER
-UserSchema.pre('save', function(next){
+UserSchema.pre('save', function (next) {
   // SET CREATED_AT AND UPDATED_AT
   now = new Date();
   this.updated_at = now;
   if ( !this.created_at ) {
     this.created_at = now;
   }
+
   next();
 });
 
