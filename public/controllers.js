@@ -84,6 +84,7 @@ angular.module('myApp.controllers', [])
 
     $scope.deleteTodo = function(todo) {
       Post.delete({ id: todo._id });
-      $scope.todos.splice(todo, 1);
+      var index = $scope.todos.indexOf(todo)
+      $scope.todos.splice(index, 1);
     }
   });
