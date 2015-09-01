@@ -22,22 +22,6 @@ angular.module('myApp.controllers', [])
     })
   }])
 
-  .controller('SignUpCtrl', function ($scope, User, $location) {
-    $scope.user = {};
-    $scope.signup = function() {
-      console.log($scope.user)
-      console.log('Signing up')
-      User.sign_up({}, $scope.user,
-        function (data) {
-          // SUCCESS
-        },
-        function (data) {
-          // ERROR
-        }
-      );
-    };    
-  })
-
   .controller('LoginCtrl', function ($rootScope, $scope, User, $location, Auth) {
     $scope.user = {};
     $scope.login = function() {
