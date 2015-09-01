@@ -37,3 +37,4 @@
  - server.js 
 
 ```# seed-mean-html
+# mean-auth
