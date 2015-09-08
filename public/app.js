@@ -15,8 +15,8 @@ angular.module('myApp', ['ngResource',
   .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'templates/todos-index'
-      , controller: 'TodosIndexCtrl'
+        templateUrl: 'templates/home.html'
+      , controller: 'MainCtrl'
       })
       .when('/login', {
         templateUrl: 'templates/login'
