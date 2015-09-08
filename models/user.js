@@ -1,6 +1,8 @@
 /*
  * POST MODEL
  */
+bcrypt = require('bcrypt'),
+salt = bcrypt.genSaltSync(10);
 
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
