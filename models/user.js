@@ -38,7 +38,9 @@ UserSchema.statics.createSecure = function (email, password, callback) {
 
      // create the new user (save to db) with hashed password
      that.create({
+       username: username,
        email: email,
+       DOB: DOB,
        passwordDigest: hash
      }, callback);
    });
