@@ -42,6 +42,26 @@ angular.module('myApp.controllers', [])
     };
   })
 
+  .controller('SignUpCtrl', function ($rootScope, $scope, User, $location, Auth) {
+    $scope.user = {};
+    $scope.signup = function() {
+      console.log($scope.user)
+      console.log('signing up')
+      User.signup({}, $scope.user,
+        function (data) {
+          console.log(data.token)
+          localStorage.setItem("jwtToken", data.token);
+          $rootScope.$broadcast('signup'); // TELL THE OTHER CONTROLLERS WE'RE LOGGED IN
+          $location.path('/');
+        },
+        function (data) {
+          var message = "Invalid Email or Password"
+          console.log(message)
+        }
+      );
+    };
+  })
+
   //POSTS
   .controller('TodosIndexCtrl', function ($scope, $location, Post, Auth) {
     Post.query(
