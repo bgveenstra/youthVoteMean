@@ -104,3 +104,9 @@ module.exports = function(app) {
     });
   });
 }
+
+// mongoose.connect(
+//   process.env.MONGOLAB_URI ||
+//   process.env.MONGOHQ_URL ||
+//   'mongodb://localhost/green' // plug in the db name you've been using
+// );

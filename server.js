@@ -51,9 +51,3 @@ app.get('*', routes.index);
 // EXPORT SERVER
 module.exports = server;
 console.log(process.env.NODE_ENV  + ' server running at http://localhost:' + config.port);
-
-mongoose.connect(
-  process.env.MONGOLAB_URI ||
-  process.env.MONGOHQ_URL ||
-  'mongodb://localhost/green' // plug in the db name you've been using
-);
