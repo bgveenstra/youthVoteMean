@@ -7,7 +7,8 @@
 angular.module('myApp', ['ngResource',
                          'ngRoute',
                          'myApp.services',
-                         'myApp.controllers'])
+                         'myApp.controllers'  
+                         ])
 
   .constant('HOST', 'http://localhost:1337') //DEV
   // .constant('HOST', 'http://yourdomain.herokuapp.com') //PRODUCTION
@@ -34,6 +35,10 @@ angular.module('myApp', ['ngResource',
       .when('/election', {
         templateUrl: 'templates/election.html'
       , controller: 'MainCtrl'
+      })
+      .when('/results', {
+        templateUrl: 'templates/results.html'
+      , controller: 'ResultsCtrl'
       })
 
       .otherwise({

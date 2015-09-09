@@ -4,7 +4,7 @@
 #election-container{
 	display: block;
   margin: 0 auto;
-  background-color: green;
+  background-color: #F6F6F6;
   width: 90%;
   float: none;
   height: 100%;
@@ -130,7 +130,7 @@ body {
 /* Profile Content */
 .content-container{
 	padding: 20px;
-  background: #0f0;
+  background: #F6F6F6;
   min-height: 11em;
   border-radius: 10px;
 }
