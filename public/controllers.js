@@ -4,7 +4,7 @@
 
 'use strict';
 
-angular.module('myApp.controllers', [])
+angular.module('myApp.controllers', ['ui.bootstrap'])
   .controller('MainCtrl', ['$rootScope', '$scope', '$location', 'Auth', function ($rootScope, $scope, $location, Auth) {
     // LOGOUT 
     $scope.logout = function() {
@@ -43,14 +43,29 @@ angular.module('myApp.controllers', [])
   })
 
   .controller('SignUpCtrl', function ($rootScope, $scope, User, $location, Auth) {
-    $scope.user = {};
     $scope.signup = function() {
       console.log($scope.user)
       console.log('signing up')
-      User.signup({}, $scope.user,
-        function (data) {
-          console.log(data.token)
-          localStorage.setItem("jwtToken", data.token);
+      $scope.user = {
+        username: '',
+        email: '',
+        DOB: '',
+        password: ''
+      }
+      $scope.postreq = function(user) {
+        $http({
+          method: 'post',
+          url: '/sign-up',
+          data:{
+            user_username:user.username,
+            user_email:user.email,
+            user_DOB: user.DOB,
+            user_password:user.password
+          }
+        }).success(function(data) {
+          console.log("User posted to database")
+        })
+      }
           $rootScope.$broadcast('signup'); // TELL THE OTHER CONTROLLERS WE'RE LOGGED IN
           $location.path('/');
         },
@@ -58,8 +73,6 @@ angular.module('myApp.controllers', [])
           var message = "Invalid Email or Password"
           console.log(message)
         }
-      );
-    };
   })
 
   //POSTS
@@ -91,4 +104,23 @@ angular.module('myApp.controllers', [])
       var index = $scope.todos.indexOf(todo)
       $scope.todos.splice(index, 1);
     }
-  });
+  })
+
+  // CAROUSEL
+  .controller('CarouselDemoCtrl', ['$scope', function ($scope) {
+  $scope.myInterval = 3000;
+  $scope.slides = [
+    {
+      image: 'http://us2012.bujournalism.info/wp-content/uploads/2012/11/Youth-VoteChanged.jpg'
+    },
+    {
+      image: 'http://www.elections.tn.gov.in/Photos/Youth%20Vote.jpg'
+    },
+    {
+      image: 'http://cstpdx.com/sites/clinton/files/bernie%20for%20the%20future.jpg'
+    },
+    {
+      image: 'http://www.danacortezshow.com/wp-content/uploads/2015/08/deeznuts1.jpg'
+    }
+    ]
+    }]);

@@ -17,26 +17,44 @@ var requireAuth = expressJwt({secret: secret}, function (req, res) {
                   );
 
 module.exports = function(app) {
-
+  
   // LOGIN
   app.post('/api/users/login', function (req, res) {
     //TODO validate req.body.username and req.body.password
     //if is invalid, return 401
-    if (!(req.body.email === 'test@test.com' && req.body.password === 'password')) {
-      res.send(401, 'Wrong user or password');
-      return;
-    }
+    // if (!(req.body.email === 'test@test.com' && req.body.password === 'password')) {
+    //   res.send(401, 'Wrong user or password');
+    //   return;
+    // }
+  User.authenticate(req.body.email, req.body.password, function(error, user) {
+   if (error) {
+     res.send(error)
+   } else if (user) {
 
-    var profile = {
+      var profile = {
       email: req.body.email
     };
 
     // We are sending the profile inside the token
-    var token = jwt.sign(profile, secret, { expiresInMinutes: 60*5 });
+      var token = jwt.sign(profile, secret, { expiresInMinutes: 60*5 });
 
-    res.json({ token: token });
+        res.json({ token: token });
+     // CREATE, SIGN, AND SEND TOKEN HERE
+      }
+    });
+  });
+
+  //SIGNUP
+  app.post('/api/users', function(req, res) {
+    User.createSecure(req.body.user_email, req.body.user_password, function(err, user) {
+      if(err) {
+        console.log('error')
+        res.status(404).send()
+      }
+      res.json(user);
+    })
   })
-  
+
   // INDEX
   app.get('/api/posts', requireAuth, function (req, res) {
     console.log(req.user)

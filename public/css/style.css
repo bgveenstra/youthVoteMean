@@ -166,12 +166,41 @@ body {
 	background-color: #3C3B6D;
 }
 
+/*BOTTOM NAVBAR*/
+h2{
+  text-align: center;
+}
+
 .home-container{
-	background-color: green;
   height: 30vh;
-  top: 31em;
+  top: 42.7em;
   position: absolute;
   width: 100%;
+}
+
+.col-md-4{
+  top: 5em;
+/*  border:1px solid blue;
+  height: 30vh;*/
+}
+
+.carousel, #carousel-images{
+  position: relative;
+  height: 39.2em!important;
+  margin: 0;
+  border: 0;
+  bottom: 1.3em;
+  width: 100%;
+}
+
+.pnx-msg-icon, .img-icon {
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    display: block;
+    margin: 0 auto;
 }
 
 /*footer*/

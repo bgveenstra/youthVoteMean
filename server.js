@@ -18,6 +18,9 @@ var express = require('express')
   // INITIALIZE SERVER
   , server = require('http').createServer(app)
   , server = server.listen(config.port);
+  // cors = require('cors');
+
+// app.use(cors());
 
 // GRAB PUBLIC FOLDER WITH ANGULAR APP
 app.use("/", express.static(path.join(__dirname, 'public')));

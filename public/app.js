@@ -13,6 +13,7 @@ angular.module('myApp', ['ngResource',
   // .constant('HOST', 'http://yourdomain.herokuapp.com') //PRODUCTION
 
   .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+
     $routeProvider
       .when('/', {
         templateUrl: 'templates/home.html'

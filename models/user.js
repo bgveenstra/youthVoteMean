@@ -1,29 +1,16 @@
 /*
  * POST MODEL
  */
-bcrypt = require('bcrypt'),
-salt = bcrypt.genSaltSync(10);
-
 var mongoose = require('mongoose'),
-    Schema = mongoose.Schema;
+    Schema = mongoose.Schema,
+    bcrypt = require('bcrypt'),
+    salt = bcrypt.genSaltSync(10);
 
 var UserSchema = new Schema({
-    created_at  : { type: Date }
-  , updated_at  : { type: Date }
+    username: String
   , email: String
+  , DOB  : { type: Date }
   , passwordDigest: String
-});
-
-// BEFORE/AFTER FILTER
-UserSchema.pre('save', function (next) {
-  // SET CREATED_AT AND UPDATED_AT
-  now = new Date();
-  this.updated_at = now;
-  if ( !this.created_at ) {
-    this.created_at = now;
-  }
-
-  next();
 });
 
 UserSchema.statics.createSecure = function (email, password, callback) {
@@ -38,9 +25,7 @@ UserSchema.statics.createSecure = function (email, password, callback) {
 
      // create the new user (save to db) with hashed password
      that.create({
-       username: username,
        email: email,
-       DOB: DOB,
        passwordDigest: hash
      }, callback);
    });
@@ -62,7 +47,7 @@ UserSchema.methods.checkPassword = function (password) {
  return password == this.password;
 };
 
-
-
 // EXPORT POST MODEL
-mongoose.model('User', UserSchema);
+var User = mongoose.model('User', UserSchema);
+
+module.exports = User;
