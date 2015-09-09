@@ -2,14 +2,12 @@
   "name": "starter-node-angular",
   "version": "1.0.0",
   "dependencies": {
-    "bootstrap": "latest",
-    "font-awesome": "latest",
     "angular": "latest",
     "angular-route": "latest",
     "angular-resource": "latest",
-    "angular-sanitize": "latest",
-    "angular-touch": "latest",
-    "underscore": "latest",
-    "angular-socket-io": "~0.7.0"
+    "angular-google-chart": "~0.0.11"
+  },
+  "resolutions": {
+    "angular": "1.4.5"
   }
 }

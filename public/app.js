@@ -6,34 +6,40 @@
 
 angular.module('myApp', ['ngResource',
                          'ngRoute',
-                         'myApp.services',
-                         'myApp.controllers'])
+                         'myApp.controllers',
+                         'googlechart'
+                         ])
 
   .constant('HOST', 'http://localhost:1337') //DEV
   // .constant('HOST', 'http://yourdomain.herokuapp.com') //PRODUCTION
 
-  .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+  .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 
     $routeProvider
       .when('/', {
         templateUrl: 'templates/home.html'
-      , controller: 'MainCtrl'
       })
-      .when('/login', {
-        templateUrl: 'templates/login'
-      , controller: 'LoginCtrl'
-      })
-      .when('/sign-up', {
-        templateUrl: 'templates/sign-up'
-      , controller: 'SignUpCtrl'
-      })
-      .when('/profile', {
-        templateUrl: 'templates/profile.html'
-      , controller: 'MainCtrl'
-      })
+      // .when('/login', {
+      //   templateUrl: 'templates/login'
+      // , controller: 'LoginCtrl'
+      // })
+      // .when('/sign-up', {
+      //   templateUrl: 'templates/sign-up'
+      // , controller: 'SignUpCtrl'
+      // })
+      // .when('/profile', {
+      //   templateUrl: 'templates/profile.html'
+      // , controller: 'ProfileCtrl'
+      // })
       .when('/election', {
         templateUrl: 'templates/election.html'
-      , controller: 'MainCtrl'
+      })
+      .when('/whyVote', {
+        templateUrl: 'templates/why_vote.html'
+      })
+      .when('/results', {
+        templateUrl: 'templates/results.html',
+        controller: 'ResultsCtrl'
       })
 
       .otherwise({
