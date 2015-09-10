@@ -59,6 +59,21 @@ a{
   top: -1em;
 }
 
+#vote{
+  text-align: center;
+  font-size: 2em;
+  font-weight: bolder;
+  color: #B22034;
+  top: 3em;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+#vote:hover{
+  color: white;
+}
+
 /*ELECTION RESULTS*/
 g{
   font-weight: bolder;
