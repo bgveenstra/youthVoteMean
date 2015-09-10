@@ -169,7 +169,7 @@ angular.module('myApp.controllers', [])
   }])
 
   .controller('HomeCtrl', ['$scope', function ($scope) {
-    $scope.myInterval = 2000;
+    $scope.myInterval = 2500;
     $scope.slides = [
       {
         image: 'http://us2012.bujournalism.info/wp-content/uploads/2012/11/Youth-VoteChanged.jpg'
@@ -211,43 +211,43 @@ angular.module('myApp.controllers', [])
   // })
 
   // .controller('SignUpCtrl', function ($rootScope, $scope, User, $location, Auth) {
-    // $scope.signup = function() {
-    //   // User.sign_up({}, $scope.user, 
-    //   //   function(data) {
+  //   $scope.signup = function() {
+  //     // User.sign_up({}, $scope.user, 
+  //     //   function(data) {
 
-    //   //   },
-    //   //   function(data) {
+  //     //   },
+  //     //   function(data) {
           
-    //   //   })
-    //   console.log($scope.user)
-    //   console.log('signing up')
-    //   $scope.user = {
-    //     username: '',
-    //     email: '',
-    //     DOB: '',
-    //     password: ''
-    //   }
-    //   $scope.postreq = function(user) {
-    //     $http({
-    //       method: 'post',
-    //       url: '/sign-up',
-    //       data:{
-    //         user_username:user.username,
-    //         user_email:user.email,
-    //         user_DOB: user.DOB,
-    //         user_password:user.password
-    //       }
-    //     })
-    //     .success(function (data) {
-    //       console.log("User posted to database")
-    //       $rootScope.$broadcast('signup'); // TELL THE OTHER CONTROLLERS WE'RE LOGGED IN
-    //       $location.path('/');
-    //     })
-    //     .error(function (data) {
-    //       var message = "Invalid Email or Password"
-    //       console.log(message)
-    //     })
-    // }
+  //     //   })
+  //     console.log($scope.user)
+  //     console.log('signing up')
+  //     $scope.user = {
+  //       username: '',
+  //       email: '',
+  //       DOB: '',
+  //       password: ''
+  //     }
+  //     $scope.postreq = function(user) {
+  //       $http({
+  //         method: 'post',
+  //         url: '/sign-up',
+  //         data:{
+  //           user_username:user.username,
+  //           user_email:user.email,
+  //           user_DOB: user.DOB,
+  //           user_password:user.password
+  //         }
+  //       })
+  //       .success(function (data) {
+  //         console.log("User posted to database")
+  //         $rootScope.$broadcast('signup'); // TELL THE OTHER CONTROLLERS WE'RE LOGGED IN
+  //         $location.path('/');
+  //       })
+  //       .error(function (data) {
+  //         var message = "Invalid Email or Password"
+  //         console.log(message)
+  //       })
+  //   }
   // })
 
   //POSTS

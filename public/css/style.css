@@ -5,11 +5,19 @@ a{
   color:black;
 }
 
+.logo{
+  height:50px;
+  left: 3em;
+  z-index: -1;
+  position: absolute;
+}
+
 .navbar-brand{
-  color: white;
+  color: blue;
   font-family: 'Shadows Into Light', cursive;
   font-weight: bolder;
   font-size: 2.5em;
+  background-color: rgba(0,0,0,.4);
 }
 
 .navbar>.container-fluid .navbar-brand {
@@ -27,7 +35,7 @@ a{
   color: white;
 }
 .navbar-header .navbar-brand:hover{
-  color: #FF8B71;
+  color: #B22034;
 }
 
 .profile-container{
@@ -52,7 +60,7 @@ a{
   position: absolute;
 }
 #president-profile{
-	background-color: #778BAE;
+	background-color: #EAEDEC;
 	border: 1px solid black;
 	height: 19em;
 	border-radius: 10px;

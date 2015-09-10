@@ -25,10 +25,10 @@ angular.module('myApp', ['ngResource',
       //   templateUrl: 'templates/login'
       // , controller: 'LoginCtrl'
       // })
-      // .when('/sign-up', {
-      //   templateUrl: 'templates/sign-up'
-      // , controller: 'SignUpCtrl'
-      // })
+      .when('/sign-up', {
+        templateUrl: 'templates/sign-up'
+      , controller: 'SignUpCtrl'
+      })
       // .when('/profile', {
       //   templateUrl: 'templates/profile.html'
       // , controller: 'ProfileCtrl'
