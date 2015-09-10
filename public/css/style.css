@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url(https://fonts.googleapis.com/css?family=Gloria+Hallelujah);
 
 /*ELECTION*/
@@ -9,14 +10,84 @@
   float: none;
   height: 100%;
   border-radius: 10px;
+=======
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+
+/*INDEX*/
+a{
+  color:black;
 }
 
+.navbar-brand{
+  color: white;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bolder;
+  font-size: 2.5em;
+>>>>>>> pieChart
+}
+
+.navbar>.container-fluid .navbar-brand {
+    margin-left: 1em;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: white;
+}
+.navbar-default .navbar-nav>li>a:hover{
+  color: #FF8B71;
+}
+
+.navbar-header .navbar-brand {
+  color: white;
+}
+.navbar-header .navbar-brand:hover{
+  color: #FF8B71;
+}
+
+.profile-container{
+  height: 28vh;
+  width: 100%;
+  top: 3.6em;
+  position: absolute;
+}
+
+.navbar{
+  background-color: #3C3B6D;
+}
+
+/*ELECTION*/
+.cand-pics{
+  height: 175px;
+  width: 175px;
+  border-radius: 150px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+}
 #president-profile{
 	background-color: #778BAE;
 	border: 1px solid black;
-	height: 20em;
+	height: 19em;
 	border-radius: 10px;
+  top: -1em;
 }
+
+/*ELECTION RESULTS*/
+g{
+  font-weight: bolder;
+}
+
+text{
+  font-size: 1.25em;
+}
+
+#pieChart{
+  height: 30em;
+  width: 70em;
+  margin: 0 auto;
+}
+
 /*PROFILE*/
 
 html, body{
@@ -32,12 +103,14 @@ body {
 /* Profile container */
 .profile {
   margin: 20px 0;
+  height: 100vh;
 }
 
 /* Profile sidebar */
 .profile-sidebar {
   padding: 20px 0 10px 0;
   background: #fff;
+  height: 39.6em;
 }
 
 .profile-userpic img {
@@ -129,15 +202,24 @@ body {
 
 /* Profile Content */
 .content-container{
+<<<<<<< HEAD
 	padding: 20px;
   background: #F6F6F6;
   min-height: 11em;
+=======
+  padding: 20px!important;
+  background: #DAFFFD;
+  min-height: 13em;
+>>>>>>> pieChart
   border-radius: 10px;
+  border: 1px solid #778BAE;
+  text-align: center;
 }
 
 .profile-content {
   padding: 20px;
   background: #fff;
+<<<<<<< HEAD
   min-height: 460px;
 }
 
@@ -169,6 +251,9 @@ body {
 
 .navbar{
 	background-color: #3C3B6D;
+=======
+  min-height: 555px;
+>>>>>>> pieChart
 }
 
 /*BOTTOM NAVBAR*/
@@ -219,12 +304,25 @@ a{
 }
 
 .social-network{
+<<<<<<< HEAD
 	background-color: #B22134;
 	 position: fixed;
    bottom:0;
    width:100%;
    height: 7em;
    margin: 0;
+=======
+    position: fixed;  
+  /* negative value of footer height */
+    /*height: 150px;*/
+    clear: both;
+    background-color: #B22134;
+    bottom: 0;
+    width: 100%;
+    height: 7em;
+    margin: 0;
+
+>>>>>>> pieChart
 }
 
 /*SOCIAL ICONS*/
@@ -232,7 +330,7 @@ a{
 	height: 48px;
 	width: 48px;
 	margin: 10px;
-	float: left;
+	float: right;
 	-webkit-transition: all ease 0.5s;
 	-moz-transition: all ease 0.5s;
 	-o-transition: all ease 0.5s;
@@ -241,8 +339,13 @@ a{
 }
 .social-popout img {
 	border-radius: 50%;
+<<<<<<< HEAD
 	margin-bottom: 1em;
   margin-left: 36em;
+=======
+	margin-left: -36em;
+  margin-top: 1em;
+>>>>>>> pieChart
 	width: 100%;
 	box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
 	-webkit-transition: all ease 0.5s;
@@ -252,7 +355,21 @@ a{
 	transition: all ease 0.5s;
 }
 .social-popout img:hover {
+<<<<<<< HEAD
 	margin-bottom: 1.5em;
   margin-left: 36.5em;
+=======
+	margin-left: -36em;
+  margin-top: 1em;
+>>>>>>> pieChart
 	box-shadow: 6px 6px 4px 4px rgba(0,0,0,0.3);
+}
+
+#connect-message{
+  clear: both;
+  color: white;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
 }

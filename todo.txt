@@ -1,12 +1,10 @@
-DONE Add login form
-DONE submit email and password
-DONE get token back
-DONE save token to localStorage
-DONE Logout
-DONE console.log(req.user) in server
-DONE display if logged in (Auth.isLoggedIn() method)
-DONE send token with requests and responses (DONE in services)
+Display Pie Chart
+	add google charts directive: http://bouil.github.io/angular-google-chart/#/fat
+	Mock data in controllers
 
-get login working
-create sign-up
-encrypt and verify password (in user.js)
+remove the profile
+remove the sign up and login stuff
+
+Reach
+vote for buttons on front page - have update the chart.
+	

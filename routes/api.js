@@ -26,27 +26,26 @@ module.exports = function(app) {
     //   res.send(401, 'Wrong user or password');
     //   return;
     // }
-  User.authenticate(req.body.email, req.body.password, function(error, user) {
-   if (error) {
-     res.send(error)
-   } else if (user) {
-
-      var profile = {
-      email: req.body.email
-    };
-
-    // We are sending the profile inside the token
-      var token = jwt.sign(profile, secret, { expiresInMinutes: 60*5 });
-
+    console.log(req.body)
+    User.authenticate(req.body.email, req.body.password, function(error, user) {
+      if (error) {
+        res.status(401).send(error)
+      } else if (user) {
+        var profile = {
+          email: req.body.email
+        };
+        // We are sending the profile inside the token
+        var token = jwt.sign(profile, secret, { expiresInMinutes: 60*5 });
+        // CREATE, SIGN, AND SEND TOKEN HERE
         res.json({ token: token });
-     // CREATE, SIGN, AND SEND TOKEN HERE
       }
     });
   });
 
   //SIGNUP
   app.post('/api/users', function(req, res) {
-    User.createSecure(req.body.user_email, req.body.user_password, function(err, user) {
+    console.log(req.body)
+    User.createSecure(req.body.email, req.body.password, function(err, user) {
       if(err) {
         console.log('error')
         res.status(404).send()
