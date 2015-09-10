@@ -6,14 +6,9 @@
 
 angular.module('myApp', ['ngResource',
                          'ngRoute',
-<<<<<<< HEAD
-                         'myApp.services',
-                         'myApp.controllers'  
-=======
                          'ui.bootstrap',
                          'myApp.controllers',
                          'googlechart'
->>>>>>> pieChart
                          ])
 
   .constant('HOST', 'http://localhost:1337') //DEV
