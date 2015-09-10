@@ -42,22 +42,38 @@ a{
 }
 
 /*ELECTION*/
-#election-container{
-	display: block;
-  margin: 0 auto;
-  background-color: green;
-  width: 90%;
-  float: none;
-  height: 100%;
-  border-radius: 10px;
+.cand-pics{
+  height: 175px;
+  width: 175px;
+  border-radius: 150px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
 }
-
 #president-profile{
 	background-color: #778BAE;
 	border: 1px solid black;
-	height: 20em;
+	height: 19em;
 	border-radius: 10px;
+  top: -1em;
 }
+
+/*ELECTION RESULTS*/
+g{
+  font-weight: bolder;
+}
+
+text{
+  font-size: 1.25em;
+}
+
+#pieChart{
+  height: 30em;
+  width: 70em;
+  margin: 0 auto;
+}
+
 /*PROFILE*/
 
 html, body{

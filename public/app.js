@@ -6,6 +6,7 @@
 
 angular.module('myApp', ['ngResource',
                          'ngRoute',
+                         'ui.bootstrap',
                          'myApp.controllers',
                          'googlechart'
                          ])
@@ -17,7 +18,8 @@ angular.module('myApp', ['ngResource',
 
     $routeProvider
       .when('/', {
-        templateUrl: 'templates/home.html'
+        templateUrl: 'templates/home.html',
+        controller: "HomeCtrl"
       })
       // .when('/login', {
       //   templateUrl: 'templates/login'

@@ -11,125 +11,165 @@ angular.module('myApp.controllers', [])
 
   .controller('ResultsCtrl', ['$scope', function ($scope) {
     $scope.chartObject = {
-      "type": "AreaChart",
-      "displayed": false,
-      "data": {
-        "cols": [
+  "type": "PieChart",
+  "displayed": false,
+  "data": {
+    "cols": [
+      {
+        "id": "month",
+        "label": "Month",
+        "type": "string",
+        "p": {}
+      },
+      {
+        "id": "laptop-id",
+        "label": "Laptop",
+        "type": "number",
+        "p": {}
+      },
+      {
+        "id": "desktop-id",
+        "label": "Desktop",
+        "type": "number",
+        "p": {}
+      },
+      {
+        "id": "server-id",
+        "label": "Server",
+        "type": "number",
+        "p": {}
+      },
+      {
+        "id": "cost-id",
+        "label": "Shipping",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      {
+        "c": [
           {
-            "id": "month",
-            "label": "Month",
-            "type": "string",
-            "p": {}
+            "v": "Bernie Sanders"
           },
           {
-            "id": "laptop-id",
-            "label": "Laptop",
-            "type": "number",
-            "p": {}
+            "v": 40,
+            "p": {
+              "style": "color:white;background-color:#800080;"
+            }
           },
-          {
-            "id": "desktop-id",
-            "label": "Desktop",
-            "type": "number",
-            "p": {}
-          },
-          {
-            "id": "server-id",
-            "label": "Server",
-            "type": "number",
-            "p": {}
-          },
-          {
-            "id": "cost-id",
-            "label": "Shipping",
-            "type": "number"
-          }
-        ],
-        "rows": [
-          {
-            "c": [
-              {
-                "v": "January"
-              },
-              {
-                "v": 19,
-                "f": "42 items"
-              },
-              {
-                "v": 12,
-                "f": "Ony 12 items"
-              },
-              {
-                "v": 7,
-                "f": "7 servers"
-              },
-              {
-                "v": 4
-              }
-            ]
-          },
-          {
-            "c": [
-              {
-                "v": "February"
-              },
-              {
-                "v": 13
-              },
-              {
-                "v": 1,
-                "f": "1 unit (Out of stock this month)"
-              },
-              {
-                "v": 12
-              },
-              {
-                "v": 2
-              }
-            ]
-          },
-          {
-            "c": [
-              {
-                "v": "March"
-              },
-              {
-                "v": 24
-              },
-              {
-                "v": 5
-              },
-              {
-                "v": 11
-              },
-              {
-                "v": 6
-              }
-            ]
-          }
+          null
         ]
       },
-      "options": {
-        "title": "Sales per month",
-        "isStacked": "true",
-        "fill": 20,
-        "displayExactValues": true,
-        "vAxis": {
-          "title": "Sales unit",
-          "gridlines": {
-            "count": 10
-          }
-        },
-        "hAxis": {
-          "title": "Date"
-        }
+      {
+        "c": [
+          {
+            "v": "Hilary Clinton"
+          },
+          {
+            "v": 30,
+            "p": {
+              "style": "color:purple;background-color:red;"
+            }
+          },
+          null
+        ]
       },
-      "formatters": {}
+      {
+        "c": [
+          {
+            "v": "Deez Nuts"
+          },
+          {
+            "v": 25,
+            "p": {
+              "style": "color:black;background-color:#33ff33;"
+            }
+          },
+          null
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "Jill Stein"
+          },
+          {
+            "v": 10,
+            "p": {
+              "style": "color:white;background-color:#800080;"
+            }
+          },
+          null
+        ]
+      },
+      {
+        "c": [
+          {
+            "v": "Donald Trump"
+          },
+          {
+            "v": 4,
+            "p": {
+              "style": "color:white;background-color:#800080;"
+            }
+          },
+          null
+        ]
+      },
+    ]
+  },
+  "options": {
+    "title": "Youth 2015 Presidental Results",
+    "isStacked": "true",
+    "fill": 20,
+    "displayExactValues": true,
+    "vAxis": {
+      "title": "Election Results",
+      "gridlines": {
+        "count": 5
+      }
+    },
+    "hAxis": {
+      "title": "Candidates"
+    },
+    "allowHtml": true,
+    "tooltip": {
+      "isHtml": false
     }
+  },
+  "formatters": {
+    "color": [
+      {
+        "columnNum": 4,
+        "formats": [
+          {
+            "from": 0,
+            "to": 3,
+            "color": "white",
+            "bgcolor": "red"
+          },
+          {
+            "from": 3,
+            "to": 5,
+            "color": "white",
+            "fromBgColor": "red",
+            "toBgColor": "blue"
+          },
+          {
+            "from": 6,
+            "to": null,
+            "color": "green",
+            "bgcolor": "#0f0"
+          }
+        ]
+      }
+    ]
+  }
+}
   }])
 
-  .controller('CarouselDemoCtrl', ['$scope', function ($scope) {
-    $scope.myInterval = 3000;
+  .controller('HomeCtrl', ['$scope', function ($scope) {
+    $scope.myInterval = 2000;
     $scope.slides = [
       {
         image: 'http://us2012.bujournalism.info/wp-content/uploads/2012/11/Youth-VoteChanged.jpg'
